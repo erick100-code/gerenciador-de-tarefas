@@ -9,4 +9,7 @@ export default defineConfig({
     react(), 
     tailwindcss(),
   ],
+  base: '/gerenciador-de-tarefas/' // importante para GitHub Pages
+
+
 })
