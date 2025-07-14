@@ -1,29 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import App from './App.jsx';
 import Pagetwo from './page/Pagetwo.jsx';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/pagina2",
-    element: <Pagetwo />,
-  }
-]);
-
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-)
-
-// coisas para fazer
-
-// botão de ver detalhes
-// salvar no localStorage 
+    <BrowserRouter basename="/gerenciador-de-tarefas">
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/pagina2" element={<Pagetwo />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>
+);

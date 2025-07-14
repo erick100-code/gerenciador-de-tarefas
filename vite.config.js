@@ -10,6 +10,4 @@ export default defineConfig({
     tailwindcss(),
   ],
   base: '/gerenciador-de-tarefas/' // importante para GitHub Pages
-
-
 })
